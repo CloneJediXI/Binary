@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BinaryConverter</string>
+    <string name="action_settings">Settings</string>
+</resources>
