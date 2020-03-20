@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     EditText decimal;
     int total;
 
+    Controller c;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
-        decimal.addTextChangedListener(new TextHandler());
+
         setSwitches();
-        setHandlers();
+        c = new Controller(switchObjects, switches, arrow, decimal);
+
     }
     public void setSwitches(){
         switchObjects[0] = (ImageButton)findViewById(R.id.s0);
@@ -57,144 +60,9 @@ public class MainActivity extends AppCompatActivity {
         switches[6] = new Switch(6);
         switches[7] = new Switch(7);
     }
-    public void setHandlers(){
-        for(int i=0; i<switchObjects.length; i++){
-            switchObjects[i].setOnClickListener(new SwitchHandler(i));
-        }
-    }
-    private class SwitchHandler implements View.OnClickListener{
-
-        private int id;
-        private int value;
-        public SwitchHandler (int i){
-            id = i;
-            value = (int)Math.round(Math.pow(2, id));
-        }
-        @Override
-        public void onClick(View v) {
-            if(!up) {
-                if (switches[id].isChecked()) {
-                    switches[id].setChecked(false);
-                    switchObjects[id].setImageResource(R.drawable.switchverticaloff);
-                    total -= value;
-                } else {
-                    switches[id].setChecked(true);
-                    switchObjects[id].setImageResource(R.drawable.switchverticalon);
-                    total += value;
-                }
-                updateText();
-            }
-        }
-    }
-    private class TextHandler implements TextWatcher{
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            if (up) {
-                try {
-                    String temp = decimal.getText().toString();
-                    total = Integer.parseInt(temp);
-                    updateSwitches();
-                } catch (Exception e) {
-                    resetSwitches();
-                    total = 0;
-                }
-            }
-        }
-    }
-    private class Switch{
-        private int id;
-        private int value;
-        private boolean checked = false;
-
-        public Switch(int i){
-            id = i;
-            value = (int)Math.round(Math.pow(2, id));
-        }
-        public int getId() {
-            return id;
-        }
-        public void setChecked(boolean b){
-            checked = b;
-        }
-        public boolean isChecked() {
-            return checked;
-        }
-    }
-    public void updateText(){
-        decimal.setText(Integer.toString(total));
-    }
-    public void updateSwitches(){
-        resetSwitches();
-        if((total - 64) >= 0){
-            total -= 64;
-            switches[6].setChecked(true);
-            switchObjects[6].setImageResource(R.drawable.switchverticalon);
-        }
-        if((total - 32) >= 0){
-            total -= 32;
-            switches[5].setChecked(true);
-            switchObjects[5].setImageResource(R.drawable.switchverticalon);
-        }
-        if((total - 16) >= 0){
-            total -= 16;
-            switches[4].setChecked(true);
-            switchObjects[4].setImageResource(R.drawable.switchverticalon);
-        }
-        if((total - 8) >= 0){
-            total -= 8;
-            switches[3].setChecked(true);
-            switchObjects[3].setImageResource(R.drawable.switchverticalon);
-        }
-        if((total - 4) >= 0){
-            total -= 4;
-            switches[2].setChecked(true);
-            switchObjects[2].setImageResource(R.drawable.switchverticalon);
-        }
-        if((total - 2) >= 0){
-            total -= 2;
-            switches[1].setChecked(true);
-            switchObjects[1].setImageResource(R.drawable.switchverticalon);
-        }
-        if((total - 1) >= 0){
-            total -= 1;
-            switches[0].setChecked(true);
-            switchObjects[0].setImageResource(R.drawable.switchverticalon);
-        }
-    }
-    public void resetSwitches(){
-        for(int i=0; i<switches.length; i++){
-            switches[i].setChecked(false);
-            switchObjects[i].setImageResource(R.drawable.switchverticaloff);
-        }
-    }
 
     public void flip(View v){
-        if(up){
-            up = false;
-            arrow.setImageResource(R.drawable.arrowdown);
-            decimal.setEnabled(false);
-            resetSwitches();
-            total = 0;
-            decimal.setText("");
-        }else{
-            up = true;
-            arrow.setImageResource(R.drawable.arrowup);
-            decimal.setEnabled(true);
-            resetSwitches();
-            total = 0;
-            decimal.setText("");
-        }
+       c.flip();
     }
 
     @Override
