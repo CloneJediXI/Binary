@@ -3,4 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="thumbcolor">#FF8400</color>
+    <color name="trackcolor">#8A4C2A</color>
 </resources>
