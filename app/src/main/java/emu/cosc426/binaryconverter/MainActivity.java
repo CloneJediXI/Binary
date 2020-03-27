@@ -1,5 +1,6 @@
 package emu.cosc426.binaryconverter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,17 +18,11 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton[] switchObjects = new ImageButton[8];
-    Switch[] switches = new Switch[8];
-    ImageButton arrow;
-    Boolean up = false;
-    EditText decimal;
-    int total;
 
-    Controller c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,35 +31,36 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        arrow = (ImageButton)findViewById(R.id.arrow);
-        decimal = (EditText) findViewById(R.id.decimal);
+        TextView ctrlLabel = findViewById(R.id.ctrlLabel);
+        TextView miniLabel = findViewById(R.id.miniLabel);
 
-        setSwitches();
-        c = new Controller(switchObjects, switches, arrow, decimal);
-        c.setImages(R.drawable.switchverticalon, R.drawable.switchverticaloff);
+        ctrlLabel.setOnClickListener(new clickWatcher(R.id.ctrlLabel, this));
+        miniLabel.setOnClickListener(new clickWatcher(R.id.miniLabel, this));
 
     }
-    public void setSwitches(){
-        switchObjects[0] = (ImageButton)findViewById(R.id.s0);
-        switchObjects[1] = (ImageButton)findViewById(R.id.s1);
-        switchObjects[2] = (ImageButton)findViewById(R.id.s2);
-        switchObjects[3] = (ImageButton)findViewById(R.id.s3);
-        switchObjects[4] = (ImageButton)findViewById(R.id.s4);
-        switchObjects[5] = (ImageButton)findViewById(R.id.s5);
-        switchObjects[6] = (ImageButton)findViewById(R.id.s6);
-        switchObjects[7] = (ImageButton)findViewById(R.id.s7);
-        switches[0] = new Switch(0);
-        switches[1] = new Switch(1);
-        switches[2] = new Switch(2);
-        switches[3] = new Switch(3);
-        switches[4] = new Switch(4);
-        switches[5] = new Switch(5);
-        switches[6] = new Switch(6);
-        switches[7] = new Switch(7);
-    }
+    private class clickWatcher implements View.OnClickListener{
 
-    public void flip(View v){
-       c.flip();
+        int id;
+        Context context;
+
+        public clickWatcher(int i, Context c){
+            id = i;
+            context = c;
+        }
+        @Override
+        public void onClick(View v) {
+            Intent activity;
+            switch(id){
+                case R.id.ctrlLabel:
+                    activity = new Intent(context, CtrlActivity.class);
+                    startActivity(activity);
+                    break;
+                case R.id.miniLabel:
+                    activity = new Intent(context, MiniActivity.class);
+                    startActivity(activity);
+                    break;
+            }
+        }
     }
 
     @Override
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(activity);
         }
         if (id == R.id.action_mini) {
-            Intent activity = new Intent(this, MainActivity.class);
+            Intent activity = new Intent(this, MiniActivity.class);
             startActivity(activity);
         }
 

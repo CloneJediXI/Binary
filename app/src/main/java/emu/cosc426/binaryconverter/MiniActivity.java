@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class CtrlActivity extends AppCompatActivity {
+public class MiniActivity extends AppCompatActivity {
 
     ImageButton[] switchObjects = new ImageButton[8];
     Switch[] switches = new Switch[8];
@@ -25,14 +25,15 @@ public class CtrlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ctrl);
+        setContentView(R.layout.activity_mini);
 
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
 
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
-        c.setImages(R.drawable.switchhorizon, R.drawable.switchhorizoff);
+        c.setImages(R.drawable.switchverticalon, R.drawable.switchverticaloff);
+
     }
     public void setSwitches(){
         switchObjects[0] = (ImageButton)findViewById(R.id.s0);
@@ -52,6 +53,7 @@ public class CtrlActivity extends AppCompatActivity {
         switches[6] = new Switch(6);
         switches[7] = new Switch(7);
     }
+
     public void flip(View v){
         c.flip();
     }

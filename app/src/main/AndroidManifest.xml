@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CtrlActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MiniActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
