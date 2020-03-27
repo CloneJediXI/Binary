@@ -2,23 +2,16 @@ package emu.cosc426.binaryconverter;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-
-public class MainActivity extends AppCompatActivity {
+public class CtrlActivity extends AppCompatActivity {
 
     ImageButton[] switchObjects = new ImageButton[8];
     Switch[] switches = new Switch[8];
@@ -32,17 +25,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_ctrl);
+
+        /*Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
 
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
 
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
-        c.setImages(R.drawable.switchverticalon, R.drawable.switchverticaloff);
-
+        c.setImages(R.drawable.switchhorizon, R.drawable.switchhorizoff);
     }
     public void setSwitches(){
         switchObjects[0] = (ImageButton)findViewById(R.id.s0);
@@ -62,9 +55,8 @@ public class MainActivity extends AppCompatActivity {
         switches[6] = new Switch(6);
         switches[7] = new Switch(7);
     }
-
     public void flip(View v){
-       c.flip();
+        c.flip();
     }
 
     @Override
@@ -81,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_ctrl) {
             Intent activity = new Intent(this, CtrlActivity.class);
             startActivity(activity);
@@ -91,6 +82,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(activity);
         }
 
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 }

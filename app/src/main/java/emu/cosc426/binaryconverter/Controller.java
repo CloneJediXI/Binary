@@ -13,6 +13,8 @@ public class Controller {
     Boolean up = false;
     EditText decimal;
     int total;
+    int imageOn;
+    int imageOff;
 
     public Controller(ImageButton[] arr, Switch[] arr2, ImageButton i, EditText e){
         switchObjects = arr;
@@ -20,6 +22,10 @@ public class Controller {
         arrow = i;
         decimal = e;
         setHandlers();
+    }
+    public void setImages(int on, int off){
+        imageOn = on;
+        imageOff = off;
     }
     public void setHandlers(){
         for(int i=0; i<switchObjects.length; i++){
@@ -40,11 +46,11 @@ public class Controller {
             if(!up) {
                 if (switches[id].isChecked()) {
                     switches[id].setChecked(false);
-                    switchObjects[id].setImageResource(R.drawable.switchverticaloff);
+                    switchObjects[id].setImageResource(imageOff);
                     total -= value;
                 } else {
                     switches[id].setChecked(true);
-                    switchObjects[id].setImageResource(R.drawable.switchverticalon);
+                    switchObjects[id].setImageResource(imageOn);
                     total += value;
                 }
                 updateText();
@@ -59,43 +65,43 @@ public class Controller {
         if((total - 64) >= 0){
             total -= 64;
             switches[6].setChecked(true);
-            switchObjects[6].setImageResource(R.drawable.switchverticalon);
+            switchObjects[6].setImageResource(imageOn);
         }
         if((total - 32) >= 0){
             total -= 32;
             switches[5].setChecked(true);
-            switchObjects[5].setImageResource(R.drawable.switchverticalon);
+            switchObjects[5].setImageResource(imageOn);
         }
         if((total - 16) >= 0){
             total -= 16;
             switches[4].setChecked(true);
-            switchObjects[4].setImageResource(R.drawable.switchverticalon);
+            switchObjects[4].setImageResource(imageOn);
         }
         if((total - 8) >= 0){
             total -= 8;
             switches[3].setChecked(true);
-            switchObjects[3].setImageResource(R.drawable.switchverticalon);
+            switchObjects[3].setImageResource(imageOn);
         }
         if((total - 4) >= 0){
             total -= 4;
             switches[2].setChecked(true);
-            switchObjects[2].setImageResource(R.drawable.switchverticalon);
+            switchObjects[2].setImageResource(imageOn);
         }
         if((total - 2) >= 0){
             total -= 2;
             switches[1].setChecked(true);
-            switchObjects[1].setImageResource(R.drawable.switchverticalon);
+            switchObjects[1].setImageResource(imageOn);
         }
         if((total - 1) >= 0){
             total -= 1;
             switches[0].setChecked(true);
-            switchObjects[0].setImageResource(R.drawable.switchverticalon);
+            switchObjects[0].setImageResource(imageOn);
         }
     }
     public void resetSwitches(){
         for(int i=0; i<switches.length; i++){
             switches[i].setChecked(false);
-            switchObjects[i].setImageResource(R.drawable.switchverticaloff);
+            switchObjects[i].setImageResource(imageOff);
         }
     }
     public void flip(){

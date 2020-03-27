@@ -27,7 +27,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:id="@+id/image"
-        android:src="@drawable/minimonitor"/>
+        android:src="@drawable/minimonitor"
+        android:contentDescription="An Image of a Mini Monitor Module"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
