@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,6 +20,9 @@ public class MiniActivity extends AppCompatActivity {
     ImageButton arrow;
     Boolean up = false;
     EditText decimal;
+    RadioGroup abGroup;
+    RadioButton a;
+    RadioButton b;
     int total;
 
     Controller c;
@@ -30,9 +35,14 @@ public class MiniActivity extends AppCompatActivity {
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
 
+        abGroup = findViewById(R.id.group);
+        a = findViewById(R.id.a);
+        b = findViewById(R.id.b);
+
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
         c.setImages(R.drawable.switchverticalon, R.drawable.switchverticaloff);
+        c.setRadios(abGroup, a, b);
 
     }
     public void setSwitches(){

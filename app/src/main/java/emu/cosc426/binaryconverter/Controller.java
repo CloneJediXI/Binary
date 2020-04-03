@@ -5,6 +5,8 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class Controller {
     ImageButton[] switchObjects;
@@ -12,6 +14,10 @@ public class Controller {
     ImageButton arrow;
     Boolean up = false;
     EditText decimal;
+    RadioGroup abGroup;
+    RadioButton a;
+    RadioButton b;
+    boolean classB;
     int total;
     int imageOn;
     int imageOff;
@@ -32,6 +38,28 @@ public class Controller {
             switchObjects[i].setOnClickListener(new SwitchHandler(i));
         }
         decimal.addTextChangedListener(new TextHandler());
+
+    }
+    public void setRadios(RadioGroup group, RadioButton a, RadioButton b){
+        abGroup = group;
+        this.a = a;
+        this.b = b;
+        this.a.setOnClickListener(new RadioHandler());
+        this.b.setOnClickListener(new RadioHandler());
+        this.a.setClickable(false);
+        this.b.setClickable(false);
+    }
+    private class RadioHandler implements View.OnClickListener{
+        public void onClick(View v){
+            if(up){
+                if(a.isChecked()){
+                    classB = false;
+                }else{
+                    classB = true;
+                }
+                updateSwitches();
+            }
+        }
     }
     private class SwitchHandler implements View.OnClickListener{
 
@@ -44,21 +72,43 @@ public class Controller {
         @Override
         public void onClick(View v) {
             if(!up) {
-                if (switches[id].isChecked()) {
-                    switches[id].setChecked(false);
-                    switchObjects[id].setImageResource(imageOff);
-                    total -= value;
-                } else {
-                    switches[id].setChecked(true);
-                    switchObjects[id].setImageResource(imageOn);
-                    total += value;
+                //Check if it is the class B Switch
+                if(id == 7){
+                    if (switches[id].isChecked()) {
+                        switches[id].setChecked(false);
+                        switchObjects[id].setImageResource(imageOff);
+                        classB = false;
+                    }else{
+                        switches[id].setChecked(true);
+                        switchObjects[id].setImageResource(imageOn);
+                        classB = true;
+                    }
+                }else{
+                    if (switches[id].isChecked()) {
+                        switches[id].setChecked(false);
+                        switchObjects[id].setImageResource(imageOff);
+                        total -= value;
+                    } else {
+                        switches[id].setChecked(true);
+                        switchObjects[id].setImageResource(imageOn);
+                        total += value;
+                    }
                 }
+
                 updateText();
             }
         }
     }
     public void updateText(){
+
         decimal.setText(Integer.toString(total));
+        if(classB){
+            b.setChecked(true);
+            a.setChecked(false);
+        }else{
+            b.setChecked(false);
+            a.setChecked(true);
+        }
     }
     public void updateSwitches(){
         resetSwitches();
@@ -97,28 +147,41 @@ public class Controller {
             switches[0].setChecked(true);
             switchObjects[0].setImageResource(imageOn);
         }
+        if(classB){
+            switches[7].setChecked(true);
+            switchObjects[7].setImageResource(imageOn);
+        }
     }
     public void resetSwitches(){
         for(int i=0; i<switches.length; i++){
             switches[i].setChecked(false);
             switchObjects[i].setImageResource(imageOff);
         }
+
     }
     public void flip(){
         if(up){
             up = false;
             arrow.setImageResource(R.drawable.arrowdown);
             decimal.setEnabled(false);
+            abGroup.setEnabled(false);
+            a.setClickable(false);
+            b.setClickable(false);
             resetSwitches();
             total = 0;
-            decimal.setText("");
+            classB = false;
+            updateText();
         }else{
             up = true;
             arrow.setImageResource(R.drawable.arrowup);
             decimal.setEnabled(true);
+            abGroup.setEnabled(true);
+            a.setClickable(true);
+            b.setClickable(true);
             resetSwitches();
             total = 0;
-            decimal.setText("");
+            classB = false;
+            updateText();
         }
     }
     private class TextHandler implements TextWatcher {

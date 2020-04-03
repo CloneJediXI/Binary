@@ -12,17 +12,26 @@
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/image"
         android:src="@drawable/ctrlio"
         android:contentDescription="An Image of a Mini Monitor Module"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/greenWrapper"
+        android:padding="8dp"
+        android:layout_below="@id/image">
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
-        android:layout_below="@id/image"
+
         android:paddingLeft="13dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="48dp"
@@ -32,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l1"
         android:paddingLeft="10dp"
@@ -44,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l2"
         android:paddingLeft="10dp"
@@ -56,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="8"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l3"
         android:paddingLeft="10dp"
@@ -68,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="16"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l4"
         android:paddingLeft="10dp"
@@ -80,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="32"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l5"
         android:paddingLeft="10dp"
@@ -92,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="64"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l6"
         android:paddingLeft="10dp"
@@ -104,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="B"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="15sp"
         android:layout_below="@id/l7"
         android:paddingLeft="10dp"
@@ -119,8 +128,7 @@
         android:layout_marginLeft="40dp"
         android:background="#000000"
         android:padding="5dp"
-        android:id="@+id/switchholder"
-        android:layout_below="@id/image">
+        android:id="@+id/switchholder">
 
         <TextView
             android:layout_width="wrap_content"
@@ -297,6 +305,7 @@
             android:id="@+id/s7"/>
 
     </RelativeLayout>
+    </RelativeLayout>
 
 
     <ImageButton
@@ -304,11 +313,12 @@
         android:layout_height="80dp"
         android:scaleType="fitCenter"
         android:src="@drawable/arrowdown"
-        android:layout_below="@id/l3"
+        android:layout_below="@id/image"
         android:rotation="270"
-        android:layout_toRightOf="@id/switchholder"
-        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/greenWrapper"
+        android:layout_marginLeft="20dp"
         android:onClick="flip"
+        android:layout_marginTop="100dp"
         android:id="@+id/arrow"/>
     <EditText
         android:layout_width="100dp"
@@ -321,12 +331,34 @@
         android:textAlignment="center"
         android:enabled="false"
         android:layout_margin="15dp"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/greenWrapper"
+        android:layout_below="@id/decimal"
+        android:id="@+id/group"
+        android:layout_marginLeft="60dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class A"
+            android:textSize="25dp"
+            android:checked="true"
+            android:id="@+id/a"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class B"
+            android:textSize="25dp"
+            android:id="@+id/b"/>
+
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
         android:textSize="20dp"
-        android:layout_below="@id/switchholder"
+        android:layout_below="@id/greenWrapper"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="10dp"
         android:background="@color/colorPrimary"
