@@ -84,12 +84,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_ctrl) {
-            Intent activity = new Intent(this, CtrlActivity.class);
-            startActivity(activity);
-        }
-        if (id == R.id.action_mini) {
-            Intent activity = new Intent(this, MiniActivity.class);
+        if (id == R.id.action_home) {
+            Intent activity = new Intent(this, MainActivity.class);
             startActivity(activity);
         }
 

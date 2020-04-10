@@ -214,6 +214,17 @@ public class Controller {
                 try {
                     String temp = decimal.getText().toString();
                     total = Integer.parseInt(temp);
+                    if(useClassA){
+                        if(total >= Math.pow(2, (switches.length-1))){
+                            total = 0;
+                            decimal.setText("0");
+                        }
+                    }else{
+                        if(total >= Math.pow(2, switches.length)){
+                            total = 0;
+                            decimal.setText("0");
+                        }
+                    }
                     updateSwitches();
                 } catch (Exception e) {
                     resetSwitches();

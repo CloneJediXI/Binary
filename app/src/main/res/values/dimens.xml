@@ -4,7 +4,7 @@
     <dimen name="switchwidth">30dp</dimen>
     <dimen name="switchmargin">7dp</dimen>
     <dimen name="dotwidth">50dp</dimen>
-    <dimen name="dotheight">60dp</dimen>
+    <dimen name="dotheight">50dp</dimen>
     <dimen name="labelmargin">23dp</dimen>
     <dimen name="labelmargin2">26dp</dimen>
 </resources>

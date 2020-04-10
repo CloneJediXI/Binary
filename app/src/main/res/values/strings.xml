@@ -3,9 +3,9 @@
     <string name="action_settings">Settings</string>
     <string name="smk_image">An Image of a smoke detector</string>
     <string name="mini_image">An Image of a mini monitor module</string>
-    <string name="ctrl_image">An Image of a D900 Control Module</string>
+    <string name="ctrl_image">An Image of a D900 Control IO</string>
     <string name="back">Back</string>
-    <string name="ctrl">D900 Control Module</string>
+    <string name="ctrl">D900 Control IO</string>
     <string name="mini">Mini Monitor Module</string>
     <string name="smk">Smoke Detector</string>
     <string name="one">1</string>

@@ -3,13 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="emu.cosc426.binaryconverter.MainActivity">
     <item
-        android:id="@+id/action_ctrl"
+        android:id="@+id/action_home"
         android:orderInCategory="100"
-        android:title="D-900 Ctrl IO"
+        android:title="Home"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_mini"
-        android:orderInCategory="90"
-        android:title="Mini Monitor Module"
-        app:showAsAction="never" />
+
 </menu>

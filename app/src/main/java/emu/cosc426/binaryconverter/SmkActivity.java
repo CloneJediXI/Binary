@@ -75,11 +75,7 @@ public class SmkActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_ctrl) {
-            Intent activity = new Intent(this, CtrlActivity.class);
-            startActivity(activity);
-        }
-        if (id == R.id.action_mini) {
+        if (id == R.id.action_home) {
             Intent activity = new Intent(this, MainActivity.class);
             startActivity(activity);
         }
