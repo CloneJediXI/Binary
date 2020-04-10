@@ -14,15 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SmkActivity extends AppCompatActivity {
 
-    ImageButton[] switchObjects = new ImageButton[8];
-    Switch[] switches = new Switch[8];
+    ImageButton[] switchObjects = new ImageButton[7];
+    Switch[] switches = new Switch[7];
     ImageButton arrow;
-    Boolean up = false;
     EditText decimal;
-    RadioGroup abGroup;
-    RadioButton a;
-    RadioButton b;
-    int total;
 
     Controller c;
 
@@ -34,14 +29,13 @@ public class SmkActivity extends AppCompatActivity {
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
 
-        abGroup = findViewById(R.id.group);
-        a = findViewById(R.id.a);
-        b = findViewById(R.id.b);
+
 
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
         c.setImages(R.drawable.dot, R.drawable.nodot);
-        c.setRadios(abGroup, a, b);
+        c.useClassA = false;
+
     }
     public void setSwitches(){
         switchObjects[0] = (ImageButton)findViewById(R.id.s0);
@@ -51,7 +45,7 @@ public class SmkActivity extends AppCompatActivity {
         switchObjects[4] = (ImageButton)findViewById(R.id.s4);
         switchObjects[5] = (ImageButton)findViewById(R.id.s5);
         switchObjects[6] = (ImageButton)findViewById(R.id.s6);
-        switchObjects[7] = (ImageButton)findViewById(R.id.s7);
+
         switches[0] = new Switch(0);
         switches[1] = new Switch(1);
         switches[2] = new Switch(2);
@@ -59,7 +53,7 @@ public class SmkActivity extends AppCompatActivity {
         switches[4] = new Switch(4);
         switches[5] = new Switch(5);
         switches[6] = new Switch(6);
-        switches[7] = new Switch(7);
+
     }
     public void flip(View v){
         c.flip();

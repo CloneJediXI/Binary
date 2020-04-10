@@ -7,7 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".CtrlActivity">
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
@@ -322,7 +327,8 @@
         android:id="@+id/arrow"/>
     <EditText
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/edittextbackground"
         android:textSize="20dp"
         android:inputType="number"
         android:id="@+id/decimal"
@@ -363,6 +369,9 @@
         android:layout_marginLeft="10dp"
         android:background="@color/colorPrimary"
         android:onClick="back"/>
+
+        </RelativeLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

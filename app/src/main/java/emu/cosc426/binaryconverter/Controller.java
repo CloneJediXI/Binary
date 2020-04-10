@@ -21,12 +21,14 @@ public class Controller {
     int total;
     int imageOn;
     int imageOff;
+    public boolean useClassA;
 
     public Controller(ImageButton[] arr, Switch[] arr2, ImageButton i, EditText e){
         switchObjects = arr;
         switches = arr2;
         arrow = i;
         decimal = e;
+        useClassA = true;
         setHandlers();
     }
     public void setImages(int on, int off){
@@ -57,6 +59,8 @@ public class Controller {
                 }else{
                     classB = true;
                 }
+                String temp = decimal.getText().toString();
+                total = Integer.parseInt(temp);
                 updateSwitches();
             }
         }
@@ -102,12 +106,14 @@ public class Controller {
     public void updateText(){
 
         decimal.setText(Integer.toString(total));
-        if(classB){
-            b.setChecked(true);
-            a.setChecked(false);
-        }else{
-            b.setChecked(false);
-            a.setChecked(true);
+        if(useClassA) {
+            if (classB) {
+                b.setChecked(true);
+                a.setChecked(false);
+            } else {
+                b.setChecked(false);
+                a.setChecked(true);
+            }
         }
     }
     public void updateSwitches(){
@@ -147,9 +153,11 @@ public class Controller {
             switches[0].setChecked(true);
             switchObjects[0].setImageResource(imageOn);
         }
-        if(classB){
-            switches[7].setChecked(true);
-            switchObjects[7].setImageResource(imageOn);
+        if(useClassA) {
+            if (classB) {
+                switches[7].setChecked(true);
+                switchObjects[7].setImageResource(imageOn);
+            }
         }
     }
     public void resetSwitches(){
@@ -164,9 +172,11 @@ public class Controller {
             up = false;
             arrow.setImageResource(R.drawable.arrowdown);
             decimal.setEnabled(false);
-            abGroup.setEnabled(false);
-            a.setClickable(false);
-            b.setClickable(false);
+            if(useClassA) {
+                abGroup.setEnabled(false);
+                a.setClickable(false);
+                b.setClickable(false);
+            }
             resetSwitches();
             total = 0;
             classB = false;
@@ -175,9 +185,11 @@ public class Controller {
             up = true;
             arrow.setImageResource(R.drawable.arrowup);
             decimal.setEnabled(true);
-            abGroup.setEnabled(true);
-            a.setClickable(true);
-            b.setClickable(true);
+            if(useClassA) {
+                abGroup.setEnabled(true);
+                a.setClickable(true);
+                b.setClickable(true);
+            }
             resetSwitches();
             total = 0;
             classB = false;

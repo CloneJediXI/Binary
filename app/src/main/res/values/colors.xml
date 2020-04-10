@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="thumbcolor">#FF8400</color>
     <color name="trackcolor">#8A4C2A</color>
+    <color name="black">#000000</color>
 </resources>

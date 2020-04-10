@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MiniActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <ImageView
         android:layout_width="300dp"
@@ -14,18 +16,18 @@
         android:layout_marginTop="60dp"
         android:id="@+id/image"
         android:src="@drawable/minimonitor"
-        android:contentDescription="An Image of a Mini Monitor Module"/>
+        android:contentDescription="@string/mini_image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0\n \n \n\n1"
+        android:text="@string/vertical10"
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#999"
         android:id="@+id/label"
         android:fontFamily="@font/netron"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_below="@id/image"/>
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -39,7 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ON"
+            android:text="@string/on"
             android:textSize="20sp"
             android:textColor="#ffffff"
 
@@ -47,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="X"
+            android:text="@string/x"
             android:textColor="@color/colorAccent"
             android:textSize="20sp"
             android:textScaleX="3"/>
@@ -59,7 +61,7 @@
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/label"
+            android:contentDescription="@string/switchimg"
             android:id="@+id/s0"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
@@ -67,223 +69,246 @@
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s0"
+            android:contentDescription="@string/switchimg"
+            android:layout_toEndOf="@id/s0"
             android:id="@+id/s1"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
             android:layout_height="@dimen/switchheight"
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
+            android:contentDescription="@string/switchimg"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s1"
+            android:layout_toEndOf="@id/s1"
             android:id="@+id/s2"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
             android:layout_height="@dimen/switchheight"
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
+            android:contentDescription="@string/switchimg"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s2"
+            android:layout_toEndOf="@id/s2"
             android:id="@+id/s3"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
             android:layout_height="@dimen/switchheight"
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
+            android:contentDescription="@string/switchimg"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s3"
+            android:layout_toEndOf="@id/s3"
             android:id="@+id/s4"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
             android:layout_height="@dimen/switchheight"
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
+            android:contentDescription="@string/switchimg"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s4"
+            android:layout_toEndOf="@id/s4"
             android:id="@+id/s5"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
             android:layout_height="@dimen/switchheight"
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
+            android:contentDescription="@string/switchimg"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s5"
+            android:layout_toEndOf="@id/s5"
             android:id="@+id/s6"/>
         <ImageButton
             android:layout_width="@dimen/switchwidth"
             android:layout_height="@dimen/switchheight"
             android:layout_margin="@dimen/switchmargin"
             android:src="@drawable/switchverticaloff"
+            android:contentDescription="@string/switchimg"
             android:layout_below="@id/on"
-            android:layout_toRightOf="@id/s6"
+            android:layout_toEndOf="@id/s6"
             android:id="@+id/s7"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text="@string/one"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s0"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s0"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
+            android:text="@string/two"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s1"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s1"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"
+            android:text="@string/three"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s2"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s2"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4"
+            android:text="@string/four"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s3"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s3"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5"
+            android:text="@string/five"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s4"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s4"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6"
+            android:text="@string/six"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s5"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s5"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7"
+            android:text="@string/seven"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s6"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s6"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="8"
+            android:text="@string/eight"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:layout_below="@id/s1"
-            android:paddingLeft="10dp"
-            android:layout_alignLeft="@id/s7"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignStart="@id/s7"/>
 
     </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="@string/one"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="40dp"
         android:fontFamily="@font/netron"
         android:id="@+id/l1"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2"
+        android:text="@string/two"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@id/l1"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@id/l1"
         android:fontFamily="@font/netron"
         android:id="@+id/l2"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/four"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="22dp"
-        android:layout_toRightOf="@id/l2"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@id/l2"
         android:fontFamily="@font/netron"
         android:id="@+id/l3"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="8"
+        android:text="@string/eight"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="24dp"
-        android:layout_toRightOf="@id/l3"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@id/l3"
         android:fontFamily="@font/netron"
         android:id="@+id/l4"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="16"
+        android:text="@string/sixteen"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@id/l4"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/l4"
         android:fontFamily="@font/netron"
         android:id="@+id/l5"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="32"
+        android:text="@string/thirtytwo"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/l5"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/l5"
         android:fontFamily="@font/netron"
         android:id="@+id/l6"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="64"
+        android:text="@string/sixtyfour"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/l6"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/l6"
         android:fontFamily="@font/netron"
         android:id="@+id/l7"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="B"
+        android:text="@string/b"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_below="@id/switchholder"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="17dp"
-        android:layout_toRightOf="@id/l7"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@id/l7"
         android:fontFamily="@font/netron"
         android:id="@+id/l8"/>
 
@@ -292,6 +317,7 @@
         android:layout_height="100dp"
         android:scaleType="fitCenter"
         android:src="@drawable/arrowdown"
+        android:contentDescription="@string/arrowimg"
         android:layout_below="@id/l1"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
@@ -299,8 +325,10 @@
         android:id="@+id/arrow"/>
     <EditText
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:layout_height="35dp"
+        android:hint="@string/autofill"
+        android:background="@drawable/edittextbackground"
+        android:textSize="20sp"
         android:inputType="number"
         android:id="@+id/decimal"
         android:layout_below="@id/arrow"
@@ -311,34 +339,37 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/decimal"
+        android:layout_toEndOf="@id/decimal"
         android:layout_below="@id/arrow"
         android:id="@+id/group"
-        android:layout_marginLeft="10dp">
+        android:layout_marginStart="10dp">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Class A"
-            android:textSize="25dp"
+            android:text="@string/classa"
+            android:textSize="25sp"
             android:checked="true"
             android:id="@+id/a"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Class B"
-            android:textSize="25dp"
+            android:text="@string/classb"
+            android:textSize="25sp"
             android:id="@+id/b"/>
 
     </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:textSize="20dp"
+        android:text="@string/back"
+        android:textSize="20sp"
         android:layout_below="@id/decimal"
         android:layout_margin="10dp"
         android:background="@color/colorPrimary"
         android:onClick="back"/>
 
 
-</RelativeLayout>
+        </RelativeLayout>
+
+
+</ScrollView>
