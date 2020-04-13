@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('D:\\Documents\\_College\\COSC_426\\Keys\\BinaryAppKeys.jks')
+            storePassword 'Asdfghjkl1'
+            keyAlias = 'handoutkey'
+            keyPassword 'Asdfghjkl1'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
