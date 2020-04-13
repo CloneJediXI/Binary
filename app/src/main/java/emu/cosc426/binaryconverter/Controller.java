@@ -31,10 +31,12 @@ public class Controller {
         useClassA = true;
         setHandlers();
     }
+    //Sets hat the on/off images are supposed to be
     public void setImages(int on, int off){
         imageOn = on;
         imageOff = off;
     }
+    //Sets the onClick Listeners
     public void setHandlers(){
         for(int i=0; i<switchObjects.length; i++){
             switchObjects[i].setOnClickListener(new SwitchHandler(i));
@@ -42,6 +44,7 @@ public class Controller {
         decimal.addTextChangedListener(new TextHandler());
 
     }
+    //Sets the class A/Class B radio Buttons
     public void setRadios(RadioGroup group, RadioButton a, RadioButton b){
         abGroup = group;
         this.a = a;
@@ -65,6 +68,7 @@ public class Controller {
             }
         }
     }
+    //Onclick listener for the switches
     private class SwitchHandler implements View.OnClickListener{
 
         private int id;
@@ -88,6 +92,7 @@ public class Controller {
                         classB = true;
                     }
                 }else{
+                    //Increment or decrement the value based on if it is up or down
                     if (switches[id].isChecked()) {
                         switches[id].setChecked(false);
                         switchObjects[id].setImageResource(imageOff);
@@ -104,7 +109,7 @@ public class Controller {
         }
     }
     public void updateText(){
-
+        //Sets the text in the output box
         decimal.setText(Integer.toString(total));
         if(useClassA) {
             if (classB) {
@@ -118,6 +123,7 @@ public class Controller {
     }
     public void updateSwitches(){
         resetSwitches();
+        //Set the switches needed to get the total to 0
         if((total - 64) >= 0){
             total -= 64;
             switches[6].setChecked(true);
@@ -161,6 +167,7 @@ public class Controller {
         }
     }
     public void resetSwitches(){
+        //Set all the switches to off
         for(int i=0; i<switches.length; i++){
             switches[i].setChecked(false);
             switchObjects[i].setImageResource(imageOff);
@@ -168,6 +175,8 @@ public class Controller {
 
     }
     public void flip(){
+        //Called when the arrow is clicked
+        //Enables or disables different parts of the app
         if(up){
             up = false;
             arrow.setImageResource(R.drawable.arrowdown);
@@ -214,7 +223,9 @@ public class Controller {
                 try {
                     String temp = decimal.getText().toString();
                     total = Integer.parseInt(temp);
+                    //Determines of the number input is too large
                     if(useClassA){
+                        //Class A counts as an extra switch so subtract it from the length
                         if(total >= Math.pow(2, (switches.length-1))){
                             total = 0;
                             decimal.setText("0");

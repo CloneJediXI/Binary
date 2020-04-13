@@ -19,7 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+//Spencer Burke, Michael Wilkes Final App Project
 public class MainActivity extends AppCompatActivity {
 
 
@@ -28,13 +28,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Sets menu Bar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //Gets refrences to views
         TextView ctrlLabel = findViewById(R.id.ctrlLabel);
         TextView miniLabel = findViewById(R.id.miniLabel);
         TextView smkLabel = findViewById(R.id.smkLabel);
-
+        //Sets on Click Listeners
         ctrlLabel.setOnClickListener(new clickWatcher(R.id.ctrlLabel, this));
         miniLabel.setOnClickListener(new clickWatcher(R.id.miniLabel, this));
         smkLabel.setOnClickListener(new clickWatcher(R.id.smkLabel, this));
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent activity;
+            //Determines which label was clicked
             switch(id){
                 case R.id.ctrlLabel:
                     activity = new Intent(context, CtrlActivity.class);

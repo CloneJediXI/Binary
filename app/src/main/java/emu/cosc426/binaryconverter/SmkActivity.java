@@ -29,8 +29,7 @@ public class SmkActivity extends AppCompatActivity {
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
 
-
-
+        //Make the Controller Object
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
         c.setImages(R.drawable.dot, R.drawable.nodot);
@@ -38,6 +37,7 @@ public class SmkActivity extends AppCompatActivity {
 
     }
     public void setSwitches(){
+        //Get references to the switches
         switchObjects[0] = (ImageButton)findViewById(R.id.s0);
         switchObjects[1] = (ImageButton)findViewById(R.id.s1);
         switchObjects[2] = (ImageButton)findViewById(R.id.s2);
@@ -74,7 +74,7 @@ public class SmkActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        //Menu Code
         if (id == R.id.action_home) {
             Intent activity = new Intent(this, MainActivity.class);
             startActivity(activity);

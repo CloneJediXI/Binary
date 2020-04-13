@@ -38,13 +38,14 @@ public class CtrlActivity extends AppCompatActivity {
         abGroup = findViewById(R.id.group);
         a = findViewById(R.id.a);
         b = findViewById(R.id.b);
-
+        //Make the Controller Object
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
         c.setImages(R.drawable.switchhorizon, R.drawable.switchhorizoff);
         c.setRadios(abGroup, a, b);
     }
     public void setSwitches(){
+        //Get references to the switches
         switchObjects[0] = (ImageButton)findViewById(R.id.s0);
         switchObjects[1] = (ImageButton)findViewById(R.id.s1);
         switchObjects[2] = (ImageButton)findViewById(R.id.s2);
