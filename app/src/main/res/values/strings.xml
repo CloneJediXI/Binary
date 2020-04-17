@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BinaryConverter</string>
+    <string name="app_name">Natsco Adressing Tool</string>
     <string name="action_settings">Settings</string>
     <string name="smk_image">An Image of a smoke detector</string>
     <string name="mini_image">An Image of a mini monitor module</string>

@@ -207,7 +207,7 @@
         android:textSize="20sp"
         android:layout_below="@id/decimal"
         android:layout_margin="10dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/back"
         android:onClick="back"/>
 
 
