@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Natsco Adressing Tool</string>
+    <string name="app_name">Natsco Addressing Tool</string>
     <string name="action_settings">Settings</string>
     <string name="smk_image">An Image of a smoke detector</string>
     <string name="mini_image">An Image of a mini monitor module</string>
@@ -28,5 +28,6 @@
     <string name="switchimg">An Image of a switch</string>
     <string name="arrowimg">An image of an arrow</string>
     <string name="autofill">0</string>
+    <string name="copyright">\u00A9 2020 National Time and Signal</string>
 
 </resources>
