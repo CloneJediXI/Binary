@@ -63,7 +63,12 @@ public class Controller {
                     classB = true;
                 }
                 String temp = decimal.getText().toString();
-                total = Integer.parseInt(temp);
+                try{
+                    total = Integer.parseInt(temp);
+                }catch(Exception e){
+                    total = 0;
+                }
+
                 updateSwitches();
             }
         }
@@ -110,7 +115,12 @@ public class Controller {
     }
     public void updateText(){
         //Sets the text in the output box
-        decimal.setText(Integer.toString(total));
+        if(total == 0){
+            decimal.setText("");
+        }else{
+            decimal.setText(Integer.toString(total));
+        }
+
         if(useClassA) {
             if (classB) {
                 b.setChecked(true);
@@ -228,12 +238,12 @@ public class Controller {
                         //Class A counts as an extra switch so subtract it from the length
                         if(total >= Math.pow(2, (switches.length-1))){
                             total = 0;
-                            decimal.setText("0");
+                            decimal.setText("");
                         }
                     }else{
                         if(total >= Math.pow(2, switches.length)){
                             total = 0;
-                            decimal.setText("0");
+                            decimal.setText("");
                         }
                     }
                     updateSwitches();

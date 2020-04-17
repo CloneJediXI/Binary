@@ -329,6 +329,7 @@
         android:layout_width="100dp"
         android:layout_height="35dp"
         android:background="@drawable/edittextbackground"
+        android:hint="@string/autofill"
         android:textSize="20dp"
         android:inputType="number"
         android:id="@+id/decimal"

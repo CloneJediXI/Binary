@@ -32,7 +32,7 @@ public class SmkActivity extends AppCompatActivity {
         //Make the Controller Object
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
-        c.setImages(R.drawable.dot, R.drawable.nodot);
+        c.setImages(R.drawable.nodot, R.drawable.dot);
         c.useClassA = false;
 
     }
