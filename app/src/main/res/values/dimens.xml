@@ -7,4 +7,5 @@
     <dimen name="dotheight">50dp</dimen>
     <dimen name="labelmargin">23dp</dimen>
     <dimen name="labelmargin2">26dp</dimen>
+    <dimen name="switchPaddingLeftLarge">20dp</dimen>
 </resources>

@@ -8,7 +8,7 @@
     <string name="ctrlav_image">An Image of a D900 Control AV</string>
     <string name="back">Back</string>
     <string name="ctrl">D900 Control IO</string>
-    <string name="mini">Mini Monitor Module</string>
+    <string name="mini">Mini Monitor Module \n(Priority and Non Priority)</string>
     <string name="smk">Smoke Detector</string>
     <string name="monitor">Monitor Module</string>
     <string name="ctrlav">D900 Control AV</string>
@@ -30,6 +30,7 @@
     <string name="x">X</string>
     <string name="vertical10">0\n \n \n\n1</string>
     <string name="horiz10">\t 1 \t \t \t 0</string>
+    <string name="horiz10flip">\t \t 0 \t \t \t 1</string>
     <string name="switchimg">An Image of a switch</string>
     <string name="arrowimg">An image of an arrow</string>
     <string name="autofill">0</string>

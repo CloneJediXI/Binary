@@ -40,7 +40,7 @@ public class CtrlAVActivity extends AppCompatActivity {
         //Make the Controller Object
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
-        c.setImages(R.drawable.switchhorizon, R.drawable.switchhorizoff);
+        c.setImages(R.drawable.switchhorizoff, R.drawable.switchhorizon);
         c.setRadios(abGroup, a, b);
     }
     public void setSwitches(){
