@@ -19,6 +19,7 @@
         <activity android:name=".MiniActivity" android:screenOrientation="portrait"/>
         <activity android:name=".SmkActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MonitorModActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CtrlAVActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Splash" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -64,8 +64,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/monitormodlow"
+                android:src="@drawable/ctrlav"
                 android:layout_below="@id/ctrlButton"
+                android:id="@+id/ctrlavButton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/ctrlav"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:background="#66000000"
+                android:layout_below="@id/ctrlLabel"
+                android:id="@+id/ctrlavLabel"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/monitormodlow"
+                android:layout_below="@id/ctrlavButton"
                 android:id="@+id/monitorButton"/>
             <TextView
                 android:layout_width="match_parent"
@@ -75,7 +92,7 @@
                 android:textSize="22sp"
                 android:textColor="#ffffff"
                 android:background="#66000000"
-                android:layout_below="@id/ctrlLabel"
+                android:layout_below="@id/ctrlavLabel"
                 android:id="@+id/monitorLabel"/>
             <ImageView
                 android:layout_width="match_parent"
