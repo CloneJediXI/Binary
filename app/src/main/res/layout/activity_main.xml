@@ -47,8 +47,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ctrlio"
+                android:src="@drawable/din"
                 android:layout_below="@id/miniButton"
+                android:id="@+id/dinButton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/din"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:background="#66000000"
+                android:layout_below="@id/miniLabel"
+                android:id="@+id/dinLabel"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ctrlio"
+                android:layout_below="@id/dinButton"
                 android:id="@+id/ctrlButton"/>
             <TextView
                 android:layout_width="match_parent"
@@ -58,7 +75,7 @@
                 android:textSize="22sp"
                 android:textColor="#ffffff"
                 android:background="#66000000"
-                android:layout_below="@id/miniLabel"
+                android:layout_below="@id/dinLabel"
                 android:id="@+id/ctrlLabel"/>
             <ImageView
                 android:layout_width="match_parent"

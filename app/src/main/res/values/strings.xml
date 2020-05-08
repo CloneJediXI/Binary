@@ -6,12 +6,14 @@
     <string name="monitor_image">An Image of a monitor module</string>
     <string name="ctrl_image">An Image of a D900 Control IO</string>
     <string name="ctrlav_image">An Image of a D900 Control AV</string>
+    <string name="din_image">An Image of a Mini Din</string>
     <string name="back">Back</string>
     <string name="ctrl">D900 Control IO</string>
     <string name="mini">Mini Monitor Module \n(Priority and Non Priority)</string>
     <string name="smk">Smoke Detector</string>
     <string name="monitor">Monitor Module</string>
     <string name="ctrlav">D900 Control AV</string>
+    <string name="din">Mini DIN</string>
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
