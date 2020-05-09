@@ -30,8 +30,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/minimonitor"
+                android:src="@drawable/a8slow"
                 android:layout_marginTop="50dp"
+                android:id="@+id/a8sButton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/a8s"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffffff"
+                android:background="#66000000"
+                android:id="@+id/a8sLabel"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/minimonitor"
+
+                android:layout_below="@id/a8sButton"
                 android:id="@+id/miniButton"/>
             <TextView
                 android:layout_width="match_parent"
@@ -39,7 +57,8 @@
                 android:text="@string/mini"
                 android:gravity="center"
                 android:textSize="22sp"
-                android:layout_marginTop="50dp"
+
+                android:layout_below="@id/a8sButton"
                 android:textColor="#ffffff"
                 android:background="#66000000"
                 android:id="@+id/miniLabel"/>

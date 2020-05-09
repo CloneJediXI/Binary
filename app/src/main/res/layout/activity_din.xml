@@ -16,7 +16,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/image"
             android:src="@drawable/din"
-            android:contentDescription="@string/mini_image"/>
+            android:contentDescription="@string/din_image"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
