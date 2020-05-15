@@ -46,22 +46,22 @@ public class A8sActivity extends AppCompatActivity {
     }
     public void setSwitches(){
         //Get references to the switches
-        switchObjects[0] = (ImageButton)findViewById(R.id.s0);
-        switchObjects[1] = (ImageButton)findViewById(R.id.s1);
-        switchObjects[2] = (ImageButton)findViewById(R.id.s2);
-        switchObjects[3] = (ImageButton)findViewById(R.id.s3);
-        switchObjects[4] = (ImageButton)findViewById(R.id.s4);
-        switchObjects[5] = (ImageButton)findViewById(R.id.s5);
-        switchObjects[6] = (ImageButton)findViewById(R.id.s6);
-        switchObjects[7] = (ImageButton)findViewById(R.id.s7);
-        switches[0] = new Switch(0);
-        switches[1] = new Switch(1);
-        switches[2] = new Switch(2);
-        switches[3] = new Switch(3);
-        switches[4] = new Switch(4);
-        switches[5] = new Switch(5);
-        switches[6] = new Switch(6);
-        switches[7] = new Switch(7);
+        switchObjects[0] = (ImageButton)findViewById(R.id.s7);
+        switchObjects[1] = (ImageButton)findViewById(R.id.s6);
+        switchObjects[2] = (ImageButton)findViewById(R.id.s5);
+        switchObjects[3] = (ImageButton)findViewById(R.id.s4);
+        switchObjects[4] = (ImageButton)findViewById(R.id.s3);
+        switchObjects[5] = (ImageButton)findViewById(R.id.s2);
+        switchObjects[6] = (ImageButton)findViewById(R.id.s1);
+        switchObjects[7] = (ImageButton)findViewById(R.id.s0);
+        switches[0] = new Switch(7);
+        switches[1] = new Switch(6);
+        switches[2] = new Switch(5);
+        switches[3] = new Switch(4);
+        switches[4] = new Switch(3);
+        switches[5] = new Switch(2);
+        switches[6] = new Switch(1);
+        switches[7] = new Switch(0);
     }
 
     public void flip(View v){

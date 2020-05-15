@@ -27,105 +27,98 @@
         android:id="@+id/greenWrapper"
         android:layout_below="@id/image">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/one"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="40dp"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l1"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/two"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="26dp"
-            android:layout_toEndOf="@id/l1"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l2"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/four"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="22dp"
-            android:layout_toEndOf="@id/l2"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l3"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/eight"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="24dp"
-            android:layout_toEndOf="@id/l3"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l4"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sixteen"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_toEndOf="@id/l4"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l5"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/thirtytwo"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="12dp"
-            android:layout_toEndOf="@id/l5"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l6"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sixtyfour"
-            android:textColor="#fff"
-            android:textSize="15sp"
-
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="12dp"
-            android:layout_toEndOf="@id/l6"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l7"/>
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/switchwidth"
             android:layout_height="wrap_content"
             android:text="@string/b"
             android:textColor="#fff"
             android:textSize="15sp"
 
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:layout_marginStart="17dp"
+            android:textAlignment="center"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="@dimen/switchmargin"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l1"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/sixtyfour"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+
+            android:layout_marginHorizontal="@dimen/switchmargin"
+            android:layout_toEndOf="@id/l1"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l2"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/thirtytwo"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/switchmargin"
+            android:layout_toEndOf="@id/l2"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l3"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/sixteen"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/switchmargin"
+            android:layout_toEndOf="@id/l3"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l4"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/eight"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/switchmargin"
+            android:layout_toEndOf="@id/l4"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l5"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/switchmargin"
+            android:layout_toEndOf="@id/l5"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l6"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/switchmargin"
+            android:layout_toEndOf="@id/l6"
+            android:fontFamily="@font/netron"
+            android:id="@+id/l7"/>
+        <TextView
+            android:layout_width="@dimen/switchwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            android:textColor="#fff"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/switchmargin"
             android:layout_toEndOf="@id/l7"
             android:fontFamily="@font/netron"
             android:id="@+id/l8"/>
