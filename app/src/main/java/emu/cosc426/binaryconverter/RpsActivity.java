@@ -8,8 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,43 +21,46 @@ public class RpsActivity extends AppCompatActivity {
     ImageButton[] switchObjects = new ImageButton[7];
     Switch[] switches = new Switch[7];
     ImageButton arrow;
-    Boolean up = false;
     EditText decimal;
-    RadioGroup abGroup;
-    RadioButton a;
-    RadioButton b;
-    int total;
 
     Controller c;
+
+    RelativeLayout addressWrapper;
+    RelativeLayout decodeWrapper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rps);
 
-        arrow = (ImageButton)findViewById(R.id.arrow);
-        decimal = (EditText) findViewById(R.id.decimal);
+        arrow = findViewById(R.id.arrow);
+        decimal =  findViewById(R.id.decimal);
 
-        abGroup = findViewById(R.id.group);
-        a = findViewById(R.id.a);
-        b = findViewById(R.id.b);
         //Make the Controller Object
         setSwitches();
         c = new Controller(switchObjects, switches, arrow, decimal);
         c.setImages(R.drawable.switchverticaloffw, R.drawable.switchverticalonw);
 
         c.useClassA = false;
+        ImageView dipswitch = findViewById(R.id.image2);
+        //Sets on Click Listeners
+        dipswitch.setOnClickListener(new RpsActivity.clickWatcher(R.drawable.rpsright, R.drawable.rpsleft, dipswitch));
+
+        addressWrapper = findViewById(R.id.addresswrapper);
+        decodeWrapper = findViewById(R.id.decodewrapper);
+        addressWrapper.setVisibility(View.VISIBLE);
+        decodeWrapper.setVisibility(View.GONE);
 
     }
     public void setSwitches(){
         //Get references to the switches
-        switchObjects[0] = (ImageButton)findViewById(R.id.s7);
-        switchObjects[1] = (ImageButton)findViewById(R.id.s6);
-        switchObjects[2] = (ImageButton)findViewById(R.id.s5);
-        switchObjects[3] = (ImageButton)findViewById(R.id.s4);
-        switchObjects[4] = (ImageButton)findViewById(R.id.s3);
-        switchObjects[5] = (ImageButton)findViewById(R.id.s2);
-        switchObjects[6] = (ImageButton)findViewById(R.id.s1);
+        switchObjects[0] = findViewById(R.id.s72);
+        switchObjects[1] = findViewById(R.id.s62);
+        switchObjects[2] = findViewById(R.id.s52);
+        switchObjects[3] = findViewById(R.id.s42);
+        switchObjects[4] = findViewById(R.id.s32);
+        switchObjects[5] = findViewById(R.id.s22);
+        switchObjects[6] = findViewById(R.id.s12);
 
         switches[0] = new Switch(7);
         switches[1] = new Switch(6);
@@ -98,16 +104,26 @@ public class RpsActivity extends AppCompatActivity {
         int imageRight;
         int imageLeft;
         boolean right;
+        ImageView image;
 
-        public clickWatcher(int right, int left){
+        public clickWatcher(int right, int left, ImageView image){
             imageLeft = left;
             imageRight = right;
-            this.right = true;
+            this.right = false;
+            this.image = image;
         }
         @Override
         public void onClick(View v) {
             if(right){
-
+                image.setImageResource(imageLeft);
+                right = false;
+                addressWrapper.setVisibility(View.VISIBLE);
+                decodeWrapper.setVisibility(View.GONE);
+            }else{
+                image.setImageResource(imageRight);
+                right = true;
+                addressWrapper.setVisibility(View.GONE);
+                decodeWrapper.setVisibility(View.VISIBLE);
             }
         }
     }

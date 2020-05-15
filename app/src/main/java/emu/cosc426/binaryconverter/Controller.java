@@ -9,18 +9,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class Controller {
-    ImageButton[] switchObjects;
-    Switch[] switches;
-    ImageButton arrow;
+    private ImageButton[] switchObjects;
+    private Switch[] switches;
+    private ImageButton arrow;
     Boolean up = false;
-    EditText decimal;
-    RadioGroup abGroup;
-    RadioButton a;
-    RadioButton b;
-    boolean classB;
-    int total;
-    int imageOn;
-    int imageOff;
+    private EditText decimal;
+    private RadioGroup abGroup;
+    private RadioButton a;
+    private RadioButton b;
+    private boolean classB;
+    private int total;
+    private int imageOn;
+    private int imageOff;
     public boolean useClassA;
 
     public Controller(ImageButton[] arr, Switch[] arr2, ImageButton i, EditText e){

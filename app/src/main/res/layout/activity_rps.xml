@@ -25,313 +25,546 @@
             android:layout_below="@id/image"
             android:id="@+id/image2"/>
 
+
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPcb"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:id="@+id/greenWrapper"
-            android:layout_below="@id/image2">
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text=" "
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="@dimen/switchmargin"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l1"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/sixtyfour"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l1"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l2"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/thirtytwo"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l2"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l3"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/sixteen"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l3"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l4"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/eight"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l4"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l5"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/four"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l5"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l6"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/two"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l6"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l7"/>
-            <TextView
-                android:layout_width="@dimen/switchwidth"
-                android:layout_height="wrap_content"
-                android:text="@string/one"
-                android:textColor="#fff"
-                android:textSize="15sp"
-
-                android:textAlignment="center"
-                android:layout_marginHorizontal="@dimen/switchmargin"
-                android:layout_toEndOf="@id/l7"
-                android:fontFamily="@font/netron"
-                android:id="@+id/l8"/>
+            android:layout_below="@id/image2"
+            android:id="@+id/mainwrapper">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="#9FC9CA"
-                android:padding="5dp"
-                android:layout_below="@id/l1"
-                android:id="@+id/switchholder">
+                android:visibility="gone"
+                android:id="@+id/addresswrapper">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="\nO\nN"
+                    android:background="@color/colorPcb"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/greenWrapper">
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginEnd="@dimen/switchmargin"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l1"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sixtyfour"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l1"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l2"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thirtytwo"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l2"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l3"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sixteen"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l3"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l4"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eight"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l4"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l5"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/four"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l5"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l6"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/two"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l6"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l7"/>
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text="@string/one"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/switchmargin"
+                        android:layout_toEndOf="@id/l7"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/l8"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="#9FC9CA"
+                        android:padding="5dp"
+                        android:layout_below="@id/l1"
+                        android:id="@+id/switchholder">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\nO\nN"
+                            android:textSize="20sp"
+                            android:textColor="#000"
+                            android:layout_marginStart="1dp"
+                            android:id="@+id/on"/>
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:text="@string/x"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp"
+                            android:textScaleX="1"/>-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/one"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s1"
+                            android:id="@+id/d1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/two"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s2"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/three"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s3"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/four"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s4"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/five"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/six"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s6"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/seven"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s7"/>
+
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:layout_below="@id/d1"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_toEndOf="@id/on"
+                            android:id="@+id/s1"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d1"
+                            android:layout_toEndOf="@id/s1"
+                            android:id="@+id/s2"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d1"
+                            android:layout_toEndOf="@id/s2"
+                            android:id="@+id/s3"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d1"
+                            android:layout_toEndOf="@id/s3"
+                            android:id="@+id/s4"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d1"
+                            android:layout_toEndOf="@id/s4"
+                            android:id="@+id/s5"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d1"
+                            android:layout_toEndOf="@id/s5"
+                            android:id="@+id/s6"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d1"
+                            android:layout_toEndOf="@id/s6"
+                            android:id="@+id/s7"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrowdown"
+                    android:contentDescription="@string/arrowimg"
+                    android:layout_below="@id/greenWrapper"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:onClick="flip"
+                    android:id="@+id/arrow"/>
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:hint="@string/autofill"
+                    android:background="@drawable/edittextbackground"
                     android:textSize="20sp"
-                    android:textColor="#000"
-                    android:layout_marginStart="1dp"
-                    android:id="@+id/on"/>
-                <!--<TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:text="@string/x"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
-                    android:textScaleX="1"/>-->
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/one"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s1"
-                    android:id="@+id/d1"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/two"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s2"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/three"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s3"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/four"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s4"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/five"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s5"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/six"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s6"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/seven"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s7"/>
-
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:layout_below="@id/d1"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_toEndOf="@id/on"
-                    android:id="@+id/s1"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:layout_toEndOf="@id/s1"
-                    android:id="@+id/s2"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:layout_toEndOf="@id/s2"
-                    android:id="@+id/s3"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:layout_toEndOf="@id/s3"
-                    android:id="@+id/s4"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:layout_toEndOf="@id/s4"
-                    android:id="@+id/s5"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:layout_toEndOf="@id/s5"
-                    android:id="@+id/s6"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:layout_toEndOf="@id/s6"
-                    android:id="@+id/s7"/>
-
+                    android:inputType="number"
+                    android:id="@+id/decimal"
+                    android:layout_below="@id/arrow"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:enabled="false"
+                    android:layout_margin="15dp"/>
 
             </RelativeLayout>
 
 
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:id="@+id/decodewrapper">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPcb"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:id="@+id/greenwrapper2">
+                    <TextView
+                        android:layout_width="@dimen/switchwidth"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginEnd="@dimen/switchmargin"
+                        android:fontFamily="@font/netron"
+                        android:id="@+id/spacer"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="#9FC9CA"
+                        android:padding="5dp"
+                        android:layout_below="@id/spacer"
+                        android:id="@+id/switchholder2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\nO\nN"
+                            android:textSize="20sp"
+                            android:textColor="#000"
+                            android:layout_marginStart="1dp"
+                            android:id="@+id/on2"/>
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:text="@string/x"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp"
+                            android:textScaleX="1"/>-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/one"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s12"
+                            android:id="@+id/d12"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/two"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s22"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/three"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s32"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/four"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s42"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/five"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s52"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/six"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s62"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/seven"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_alignStart="@id/s72"/>
+
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:layout_below="@id/d12"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_toEndOf="@id/on2"
+                            android:id="@+id/s12"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d12"
+                            android:layout_toEndOf="@id/s12"
+                            android:id="@+id/s22"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d12"
+                            android:layout_toEndOf="@id/s22"
+                            android:id="@+id/s32"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d12"
+                            android:layout_toEndOf="@id/s32"
+                            android:id="@+id/s42"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d12"
+                            android:layout_toEndOf="@id/s42"
+                            android:id="@+id/s52"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d12"
+                            android:layout_toEndOf="@id/s52"
+                            android:id="@+id/s62"/>
+                        <ImageButton
+                            android:layout_width="@dimen/switchwidth"
+                            android:layout_height="@dimen/switchheight"
+                            android:layout_margin="@dimen/switchmargin"
+                            android:src="@drawable/switchverticalonw"
+                            android:contentDescription="@string/switchimg"
+                            android:layout_below="@id/d12"
+                            android:layout_toEndOf="@id/s62"
+                            android:id="@+id/s72"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="25sp"
+                    android:text="Circuit 1 outputs :"
+                    android:layout_below="@id/greenwrapper2"
+                    android:id="@+id/c1text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="25sp"
+                    android:text="Circuit 2 outputs :"
+                    android:layout_below="@id/c1text"
+                    android:id="@+id/c2text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="25sp"
+                    android:text="Both can be synchronized, \n"
+                    android:layout_below="@id/c2text"
+                    android:id="@+id/bothtext"/>
+            </RelativeLayout>
+
 
         </RelativeLayout>
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/arrowdown"
-            android:contentDescription="@string/arrowimg"
-            android:layout_below="@id/greenWrapper"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:onClick="flip"
-            android:id="@+id/arrow"/>
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:hint="@string/autofill"
-            android:background="@drawable/edittextbackground"
-            android:textSize="20sp"
-            android:inputType="number"
-            android:id="@+id/decimal"
-            android:layout_below="@id/arrow"
-            android:layout_centerHorizontal="true"
-            android:textAlignment="center"
-            android:enabled="false"
-            android:layout_margin="15dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/back"
             android:textSize="20sp"
-            android:layout_below="@id/decimal"
+            android:layout_below="@id/mainwrapper"
             android:layout_margin="10dp"
             android:background="@color/back"
             android:onClick="back"/>
