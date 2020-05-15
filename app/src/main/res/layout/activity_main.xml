@@ -66,8 +66,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/din"
+                android:src="@drawable/rpslow"
                 android:layout_below="@id/miniButton"
+                android:id="@+id/rpsButton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/rps"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:background="#66000000"
+                android:layout_below="@id/miniLabel"
+                android:id="@+id/rpsLabel"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/din"
+                android:layout_below="@id/rpsButton"
                 android:id="@+id/dinButton"/>
             <TextView
                 android:layout_width="match_parent"
@@ -77,7 +94,7 @@
                 android:textSize="22sp"
                 android:textColor="#ffffff"
                 android:background="#66000000"
-                android:layout_below="@id/miniLabel"
+                android:layout_below="@id/rpsLabel"
                 android:id="@+id/dinLabel"/>
             <ImageView
                 android:layout_width="match_parent"

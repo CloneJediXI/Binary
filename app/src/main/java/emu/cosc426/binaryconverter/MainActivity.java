@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         TextView ctrlavLabel = findViewById(R.id.ctrlavLabel);
         TextView dinLabel = findViewById(R.id.dinLabel);
         TextView a8sLabel = findViewById(R.id.a8sLabel);
+        TextView rpsLabel = findViewById(R.id.rpsLabel);
         //Sets on Click Listeners
         ctrlLabel.setOnClickListener(new clickWatcher(R.id.ctrlLabel, this));
         miniLabel.setOnClickListener(new clickWatcher(R.id.miniLabel, this));
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         ctrlavLabel.setOnClickListener(new clickWatcher(R.id.ctrlavLabel, this));
         dinLabel.setOnClickListener(new clickWatcher(R.id.dinLabel, this));
         a8sLabel.setOnClickListener(new clickWatcher(R.id.a8sLabel, this));
+        rpsLabel.setOnClickListener(new clickWatcher(R.id.rpsLabel, this));
 
     }
     private class clickWatcher implements View.OnClickListener{
@@ -89,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.a8sLabel:
                     activity = new Intent(context, A8sActivity.class);
+                    startActivity(activity);
+                    break;
+                case R.id.rpsLabel:
+                    activity = new Intent(context, RpsActivity.class);
                     startActivity(activity);
                     break;
             }

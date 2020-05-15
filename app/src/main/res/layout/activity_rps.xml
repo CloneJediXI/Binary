@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".A8sActivity">
+    tools:context=".RpsActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,113 +15,120 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:id="@+id/image"
-            android:src="@drawable/a8slow"
+            android:src="@drawable/rpslow"
             android:contentDescription="@string/din_image"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/rpsleft"
+            android:layout_below="@id/image"
+            android:id="@+id/image2"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPcb"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:id="@+id/greenWrapper"
-        android:layout_below="@id/image">
-        <TextView
-            android:layout_width="@dimen/switchwidth"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" "
-            android:textColor="#fff"
-            android:textSize="15sp"
+            android:background="@color/colorPcb"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/greenWrapper"
+            android:layout_below="@id/image2">
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginStart="45dp"
-            android:layout_marginEnd="@dimen/switchmargin"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l1"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/sixtyfour"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="@dimen/switchmargin"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l1"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/sixtyfour"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
 
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l1"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l2"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/thirtytwo"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l1"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l2"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/thirtytwo"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l2"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l3"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/sixteen"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l2"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l3"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/sixteen"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l3"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l4"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/eight"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l3"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l4"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/eight"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l4"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l5"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/four"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l4"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l5"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/four"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l5"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l6"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/two"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l5"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l6"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/two"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l6"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l7"/>
-        <TextView
-            android:layout_width="@dimen/switchwidth"
-            android:layout_height="wrap_content"
-            android:text="@string/one"
-            android:textColor="#fff"
-            android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l6"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l7"/>
+            <TextView
+                android:layout_width="@dimen/switchwidth"
+                android:layout_height="wrap_content"
+                android:text="@string/one"
+                android:textColor="#fff"
+                android:textSize="15sp"
 
-            android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/switchmargin"
-            android:layout_toEndOf="@id/l7"
-            android:fontFamily="@font/netron"
-            android:id="@+id/l8"/>
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/switchmargin"
+                android:layout_toEndOf="@id/l7"
+                android:fontFamily="@font/netron"
+                android:id="@+id/l8"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -158,8 +165,9 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s0"
+                    android:layout_alignStart="@id/s1"
                     android:id="@+id/d1"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -169,7 +177,7 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s1"/>
+                    android:layout_alignStart="@id/s2"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,7 +187,7 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s2"/>
+                    android:layout_alignStart="@id/s3"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -189,7 +197,7 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s3"/>
+                    android:layout_alignStart="@id/s4"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -199,7 +207,7 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s4"/>
+                    android:layout_alignStart="@id/s5"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -209,7 +217,7 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s5"/>
+                    android:layout_alignStart="@id/s6"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -219,34 +227,16 @@
 
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignStart="@id/s6"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/eight"
-                    android:textColor="#000"
-                    android:textSize="15sp"
-
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
                     android:layout_alignStart="@id/s7"/>
+
                 <ImageButton
                     android:layout_width="@dimen/switchwidth"
                     android:layout_height="@dimen/switchheight"
                     android:layout_margin="@dimen/switchmargin"
                     android:src="@drawable/switchverticalonw"
+                    android:layout_below="@id/d1"
+                    android:contentDescription="@string/switchimg"
                     android:layout_toEndOf="@id/on"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_below="@id/d1"
-                    android:id="@+id/s0"/>
-                <ImageButton
-                    android:layout_width="@dimen/switchwidth"
-                    android:layout_height="@dimen/switchheight"
-                    android:layout_margin="@dimen/switchmargin"
-                    android:src="@drawable/switchverticalonw"
-                    android:layout_below="@id/d1"
-                    android:contentDescription="@string/switchimg"
-                    android:layout_toEndOf="@id/s0"
                     android:id="@+id/s1"/>
                 <ImageButton
                     android:layout_width="@dimen/switchwidth"
@@ -309,7 +299,7 @@
 
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
         <ImageButton
             android:layout_width="50dp"

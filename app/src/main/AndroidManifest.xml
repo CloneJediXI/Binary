@@ -22,6 +22,7 @@
         <activity android:name=".CtrlAVActivity" android:screenOrientation="portrait"/>
         <activity android:name=".DinActivity" android:screenOrientation="portrait"/>
         <activity android:name=".A8sActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RpsActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Splash" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

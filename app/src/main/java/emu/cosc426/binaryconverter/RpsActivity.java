@@ -1,5 +1,6 @@
 package emu.cosc426.binaryconverter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,10 +13,10 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class A8sActivity extends AppCompatActivity {
+public class RpsActivity extends AppCompatActivity {
 
-    ImageButton[] switchObjects = new ImageButton[8];
-    Switch[] switches = new Switch[8];
+    ImageButton[] switchObjects = new ImageButton[7];
+    Switch[] switches = new Switch[7];
     ImageButton arrow;
     Boolean up = false;
     EditText decimal;
@@ -29,7 +30,7 @@ public class A8sActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a8s);
+        setContentView(R.layout.activity_rps);
 
         arrow = (ImageButton)findViewById(R.id.arrow);
         decimal = (EditText) findViewById(R.id.decimal);
@@ -54,7 +55,7 @@ public class A8sActivity extends AppCompatActivity {
         switchObjects[4] = (ImageButton)findViewById(R.id.s3);
         switchObjects[5] = (ImageButton)findViewById(R.id.s2);
         switchObjects[6] = (ImageButton)findViewById(R.id.s1);
-        switchObjects[7] = (ImageButton)findViewById(R.id.s0);
+
         switches[0] = new Switch(7);
         switches[1] = new Switch(6);
         switches[2] = new Switch(5);
@@ -62,7 +63,7 @@ public class A8sActivity extends AppCompatActivity {
         switches[4] = new Switch(3);
         switches[5] = new Switch(2);
         switches[6] = new Switch(1);
-        switches[7] = new Switch(0);
+
     }
 
     public void flip(View v){
@@ -91,5 +92,23 @@ public class A8sActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    private class clickWatcher implements View.OnClickListener{
+
+        int imageRight;
+        int imageLeft;
+        boolean right;
+
+        public clickWatcher(int right, int left){
+            imageLeft = left;
+            imageRight = right;
+            this.right = true;
+        }
+        @Override
+        public void onClick(View v) {
+            if(right){
+
+            }
+        }
     }
 }
