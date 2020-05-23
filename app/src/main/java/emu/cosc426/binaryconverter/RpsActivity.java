@@ -20,10 +20,14 @@ public class RpsActivity extends AppCompatActivity {
 
     ImageButton[] switchObjects = new ImageButton[7];
     Switch[] switches = new Switch[7];
+    ImageButton[] switchObjects2 = new ImageButton[7];
+    Switch[] switches2 = new Switch[7];
     ImageButton arrow;
+    ImageButton arrow2;
     EditText decimal;
 
     Controller c;
+    RpsDecoder r;
 
     RelativeLayout addressWrapper;
     RelativeLayout decodeWrapper;
@@ -34,6 +38,7 @@ public class RpsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rps);
 
         arrow = findViewById(R.id.arrow);
+        arrow2 = findViewById(R.id.arrow2);
         decimal =  findViewById(R.id.decimal);
 
         //Make the Controller Object
@@ -42,6 +47,11 @@ public class RpsActivity extends AppCompatActivity {
         c.setImages(R.drawable.switchverticaloffw, R.drawable.switchverticalonw);
 
         c.useClassA = false;
+
+        //Make Decoder Object
+        r = new RpsDecoder(switchObjects2, switches2, arrow2);
+        r.setRadios((RadioGroup)findViewById(R.id.c1), (RadioGroup)findViewById(R.id.c2), (RadioGroup)findViewById(R.id.c3));
+        r.setImages(R.drawable.switchverticaloffw, R.drawable.switchverticalonw);
         ImageView dipswitch = findViewById(R.id.image2);
         //Sets on Click Listeners
         dipswitch.setOnClickListener(new RpsActivity.clickWatcher(R.drawable.rpsright, R.drawable.rpsleft, dipswitch));
@@ -54,13 +64,29 @@ public class RpsActivity extends AppCompatActivity {
     }
     public void setSwitches(){
         //Get references to the switches
-        switchObjects[0] = findViewById(R.id.s72);
-        switchObjects[1] = findViewById(R.id.s62);
-        switchObjects[2] = findViewById(R.id.s52);
-        switchObjects[3] = findViewById(R.id.s42);
-        switchObjects[4] = findViewById(R.id.s32);
-        switchObjects[5] = findViewById(R.id.s22);
-        switchObjects[6] = findViewById(R.id.s12);
+        switchObjects2[0] = findViewById(R.id.s12);
+        switchObjects2[1] = findViewById(R.id.s22);
+        switchObjects2[2] = findViewById(R.id.s32);
+        switchObjects2[3] = findViewById(R.id.s42);
+        switchObjects2[4] = findViewById(R.id.s52);
+        switchObjects2[5] = findViewById(R.id.s62);
+        switchObjects2[6] = findViewById(R.id.s72);
+
+        switches2[0] = new Switch(1);
+        switches2[1] = new Switch(2);
+        switches2[2] = new Switch(3);
+        switches2[3] = new Switch(4);
+        switches2[4] = new Switch(5);
+        switches2[5] = new Switch(6);
+        switches2[6] = new Switch(7);
+
+        switchObjects[0] = findViewById(R.id.s7);
+        switchObjects[1] = findViewById(R.id.s6);
+        switchObjects[2] = findViewById(R.id.s5);
+        switchObjects[3] = findViewById(R.id.s4);
+        switchObjects[4] = findViewById(R.id.s3);
+        switchObjects[5] = findViewById(R.id.s2);
+        switchObjects[6] = findViewById(R.id.s1);
 
         switches[0] = new Switch(7);
         switches[1] = new Switch(6);
@@ -74,6 +100,10 @@ public class RpsActivity extends AppCompatActivity {
 
     public void flip(View v){
         c.flip();
+    }
+
+    public void flip2(View v){
+        r.flip();
     }
 
     public void back(View v){ finish();}

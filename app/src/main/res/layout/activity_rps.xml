@@ -527,6 +527,17 @@
                     </RelativeLayout>
                 </RelativeLayout>
 
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrowdown"
+                    android:contentDescription="@string/arrowimg"
+                    android:layout_below="@id/greenwrapper2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:onClick="flip2"
+                    android:id="@+id/arrow2"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -534,8 +545,36 @@
                     android:paddingStart="20dp"
                     android:textSize="25sp"
                     android:text="Circuit 1 outputs :"
-                    android:layout_below="@id/greenwrapper2"
+                    android:layout_below="@id/arrow2"
                     android:id="@+id/c1text"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/c1text"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/c1">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code0"
+                        android:checked="true"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code1"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code2"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code3"
+                        android:textSize="20dp"/>
+                </RadioGroup>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -543,8 +582,36 @@
                     android:paddingStart="20dp"
                     android:textSize="25sp"
                     android:text="Circuit 2 outputs :"
-                    android:layout_below="@id/c1text"
+                    android:layout_below="@id/c1"
                     android:id="@+id/c2text"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/c2text"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/c2">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code0"
+                        android:checked="true"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code1"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code2"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code3"
+                        android:textSize="20dp"/>
+                </RadioGroup>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -552,8 +619,26 @@
                     android:paddingStart="20dp"
                     android:textSize="25sp"
                     android:text="Both can be synchronized, \n"
-                    android:layout_below="@id/c2text"
+                    android:layout_below="@id/c2"
                     android:id="@+id/bothtext"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bothtext"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/c3">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code4"
+                        android:checked="true"
+                        android:textSize="20dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code5"
+                        android:textSize="20dp"/>
+                </RadioGroup>
             </RelativeLayout>
 
 

@@ -41,5 +41,10 @@
     <string name="arrowimg">An image of an arrow</string>
     <string name="autofill">0</string>
     <string name="copyright">\u00A9 2020 National Time and Signal</string>
-
+    <string name="code0">SG-C* pattern</string>
+    <string name="code1">steady ON/OFF pattern</string>
+    <string name="code2">code 3 pattern</string>
+    <string name="code3">march time pattern</string>
+    <string name="code4">individually controlled</string>
+    <string name="code5">not individually controlled</string>
 </resources>
