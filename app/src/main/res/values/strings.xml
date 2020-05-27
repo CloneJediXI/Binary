@@ -47,4 +47,5 @@
     <string name="code3">march time pattern</string>
     <string name="code4">individually controlled</string>
     <string name="code5">not individually controlled</string>
+    <string name="arrow">Converts \nthis way\n </string>
 </resources>

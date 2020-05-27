@@ -317,6 +317,13 @@
                     android:layout_margin="10dp"
                     android:onClick="flip"
                     android:id="@+id/arrow"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrow"
+                    android:textSize="25sp"
+                    android:layout_toEndOf="@id/arrow"
+                    android:layout_alignBottom="@id/arrow"/>
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="35dp"
@@ -538,6 +545,13 @@
                     android:layout_margin="10dp"
                     android:onClick="flip2"
                     android:id="@+id/arrow2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrow"
+                    android:textSize="25sp"
+                    android:layout_toEndOf="@id/arrow2"
+                    android:layout_alignBottom="@id/arrow2"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

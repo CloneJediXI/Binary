@@ -80,6 +80,8 @@ public class RpsDecoder {
                             temp = (RadioButton)c1.getChildAt(i);
                             if(i != value){
                                 temp.setChecked(false);
+                            }else{
+                                temp.setChecked(true);
                             }
                         }
                         break;
@@ -89,6 +91,8 @@ public class RpsDecoder {
                             temp = (RadioButton)c2.getChildAt(i);
                             if(i != value){
                                 temp.setChecked(false);
+                            }else{
+                                temp.setChecked(true);
                             }
                         }
                         break;
@@ -98,6 +102,8 @@ public class RpsDecoder {
                             temp = (RadioButton)c3.getChildAt(i);
                             if(i != value){
                                 temp.setChecked(false);
+                            }else{
+                                temp.setChecked(true);
                             }
                         }
                         break;
