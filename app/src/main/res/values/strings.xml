@@ -45,7 +45,7 @@
     <string name="code1">steady ON/OFF pattern</string>
     <string name="code2">code 3 pattern</string>
     <string name="code3">march time pattern</string>
-    <string name="code4">individually controlled</string>
-    <string name="code5">not individually controlled</string>
+    <string name="code4">can be individually controlled</string>
+    <string name="code5">can not be individually controlled</string>
     <string name="arrow">Converts \nthis way\n </string>
 </resources>
