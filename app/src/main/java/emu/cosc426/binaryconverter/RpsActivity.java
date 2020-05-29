@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -60,6 +61,17 @@ public class RpsActivity extends AppCompatActivity {
         decodeWrapper = findViewById(R.id.decodewrapper);
         addressWrapper.setVisibility(View.VISIBLE);
         decodeWrapper.setVisibility(View.GONE);
+
+        Button popupButton = findViewById(R.id.buttonPopup);
+        popupButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                PopUpClass popUpClass = new PopUpClass();
+                popUpClass.showPopupWindow(v);
+            }
+        });
 
     }
     public void setSwitches(){
@@ -157,4 +169,5 @@ public class RpsActivity extends AppCompatActivity {
             }
         }
     }
+
 }

@@ -561,6 +561,13 @@
                     android:text="Circuit 1 outputs :"
                     android:layout_below="@id/arrow2"
                     android:id="@+id/c1text"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/c1text"
+                    android:layout_toEndOf="@id/arrow2"
+                    android:text="test"
+                    android:id="@+id/buttonPopup"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
