@@ -4,8 +4,13 @@
     tools:context="emu.cosc426.binaryconverter.MainActivity">
     <item
         android:id="@+id/action_home"
-        android:orderInCategory="100"
+        android:orderInCategory="90"
         android:title="Home"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_manual"
+        android:orderInCategory="100"
+        android:title="User Manual"
         app:showAsAction="never" />
 
 </menu>

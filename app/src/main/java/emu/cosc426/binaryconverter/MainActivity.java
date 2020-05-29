@@ -119,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_home) {
             Intent activity = new Intent(this, MainActivity.class);
             startActivity(activity);
+        }else if (id == R.id.action_manual) {
+            Intent activity = new Intent(this, ManualActivity.class);
+            startActivity(activity);
         }
 
         return true;
