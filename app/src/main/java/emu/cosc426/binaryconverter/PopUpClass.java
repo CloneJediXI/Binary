@@ -44,7 +44,7 @@ public class PopUpClass {
             public void onClick(View v) {
 
                 //As an example, display the message
-                //Toast.makeText(view.getContext(), "Wow, popup action button", Toast.LENGTH_SHORT).show();
+                popupWindow.dismiss();
 
             }
         });

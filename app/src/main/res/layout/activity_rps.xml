@@ -562,11 +562,15 @@
                     android:layout_below="@id/arrow2"
                     android:id="@+id/c1text"/>
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignBaseline="@id/c1text"
                     android:layout_toEndOf="@id/arrow2"
-                    android:text="test"
+                    android:text="\?"
+                    android:background="#0003A9F4"
+                    android:textColor="#00BCD4"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
                     android:id="@+id/buttonPopup"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -605,6 +609,17 @@
                     android:text="Circuit 2 outputs :"
                     android:layout_below="@id/c1"
                     android:id="@+id/c2text"/>
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBaseline="@id/c2text"
+                    android:layout_toEndOf="@id/arrow2"
+                    android:text="\?"
+                    android:background="#0003A9F4"
+                    android:textColor="#00BCD4"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/buttonPopup2"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -642,6 +657,17 @@
                     android:text="Both Circuits: "
                     android:layout_below="@id/c2"
                     android:id="@+id/bothtext"/>
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBaseline="@id/bothtext"
+                    android:layout_toEndOf="@id/arrow2"
+                    android:text="\?"
+                    android:background="#0003A9F4"
+                    android:textColor="#00BCD4"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/buttonPopup3"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

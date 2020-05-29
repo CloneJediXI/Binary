@@ -10,10 +10,10 @@
             android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/image"
         android:src="@drawable/minimonitor"
         android:contentDescription="@string/mini_image"/>
@@ -32,7 +32,8 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/label"
+        android:layout_marginStart="5dp"
         android:background="#000000"
         android:padding="5dp"
         android:id="@+id/switchholder"

@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 public class RpsActivity extends AppCompatActivity {
 
     ImageButton[] switchObjects = new ImageButton[7];
@@ -72,6 +74,30 @@ public class RpsActivity extends AppCompatActivity {
                 popUpClass.showPopupWindow(v);
             }
         });
+        Button popupButton2 = findViewById(R.id.buttonPopup2);
+        popupButton2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                PopUpClass popUpClass = new PopUpClass();
+                popUpClass.showPopupWindow(v);
+            }
+        });Button popupButton3 = findViewById(R.id.buttonPopup3);
+        popupButton3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                PopUpClass popUpClass = new PopUpClass();
+                popUpClass.showPopupWindow(v);
+            }
+        });
+
+        PhotoViewAttacher photoAttacher;
+        photoAttacher= new PhotoViewAttacher((ImageView) findViewById(R.id.image));
+        photoAttacher.update();
+
 
     }
     public void setSwitches(){
@@ -136,6 +162,9 @@ public class RpsActivity extends AppCompatActivity {
 
         if (id == R.id.action_home) {
             Intent activity = new Intent(this, MainActivity.class);
+            startActivity(activity);
+        }else if (id == R.id.action_manual) {
+            Intent activity = new Intent(this, ManualActivity.class);
             startActivity(activity);
         }
 

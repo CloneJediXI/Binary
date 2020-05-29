@@ -7,11 +7,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class MiniActivity extends AppCompatActivity {
 
@@ -44,6 +47,9 @@ public class MiniActivity extends AppCompatActivity {
         c.setImages(R.drawable.switchverticalon, R.drawable.switchverticaloff);
         c.setRadios(abGroup, a, b);
 
+        PhotoViewAttacher photoAttacher;
+        photoAttacher= new PhotoViewAttacher((ImageView) findViewById(R.id.image));
+        photoAttacher.update();
     }
     public void setSwitches(){
         //Get references to the switches
@@ -87,6 +93,9 @@ public class MiniActivity extends AppCompatActivity {
 
         if (id == R.id.action_home) {
             Intent activity = new Intent(this, MainActivity.class);
+            startActivity(activity);
+        }else if (id == R.id.action_manual) {
+            Intent activity = new Intent(this, ManualActivity.class);
             startActivity(activity);
         }
 

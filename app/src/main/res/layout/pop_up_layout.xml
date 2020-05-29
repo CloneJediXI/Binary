@@ -8,24 +8,34 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     tools:context=".RpsActivity"
+    android:background="#C4424242"
     android:gravity="center">
 
         <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="This is a test"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Circuit Output Explanation"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text"
+                android:layout_gravity="center"
+                android:text="@string/explanation"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="17sp"/>
 
 
         <Button
-            android:id="@+id/messageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This is a button" />
+                android:id="@+id/messageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close" />
 
 
 </LinearLayout>

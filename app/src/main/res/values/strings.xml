@@ -48,4 +48,5 @@
     <string name="code4">can be individually controlled</string>
     <string name="code5">can not be individually controlled</string>
     <string name="arrow">Converts \nthis way\n </string>
+    <string name="explanation">SG-C* pattern means .... \n Steady ON/OFF pattern is ... \n Code 3 pattern means that ... \n March Time pattern implies that ...</string>
 </resources>
