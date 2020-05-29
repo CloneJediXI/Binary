@@ -1,8 +1,10 @@
 package emu.cosc426.binaryconverter;
 
 import android.content.Intent;
+import android.gesture.GestureOverlayView;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -16,18 +18,13 @@ import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
-public class Splash extends AppCompatActivity {
+public class Splash extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         final ImageView image = findViewById(R.id.gif);
-
-
-        /*Glide.with(this)
-                .load(R.drawable.natsco)
-                .into(image);*/
 
         Glide.with(this).asGif().load(R.drawable.natsco).listener(new RequestListener<GifDrawable>() {
             @Override
@@ -65,4 +62,17 @@ public class Splash extends AppCompatActivity {
         };
         myThread.start();
     }
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                Intent activity = new Intent(this, MainActivity.class);
+                startActivity(activity);
+                break;
+        }
+
+        return false;
+    }
+
 }
